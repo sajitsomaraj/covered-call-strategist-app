@@ -1,8 +1,9 @@
 
 import { useEffect, useState } from "react";
-import { Card, CardContent } from "../ui/card";
-import { Button } from "../ui/button";
-import { Input } from "../ui/input";
+const Card = ({ children }) => <div className="bg-white p-4 rounded shadow">{children}</div>;
+const CardContent = ({ children }) => <div>{children}</div>;
+const Button = ({ children, ...props }) => <button className="bg-blue-600 text-white px-4 py-2 rounded" {...props}>{children}</button>;
+const Input = (props) => <input className="border p-2 rounded w-full" {...props} />;
 import { Upload } from "lucide-react";
 
 export default function CoveredCallDashboard() {
